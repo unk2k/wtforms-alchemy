@@ -48,7 +48,7 @@ class ModelFieldList(FieldList):
         if hasattr(self, 'meta'):
             # WTForms 2.0
             return self.unbound_field.bind(
-                form=None,
+                form=self._form,
                 name=name,
                 prefix=self._prefix,
                 id=id,
